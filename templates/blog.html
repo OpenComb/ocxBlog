@@ -1,0 +1,53 @@
+<link type="text/css" href="/ocxBlog/public/style/index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/ocxBootstrapWysihtml5/public/bootstrap-wysihtml5.css">
+
+
+<div class="entry">
+
+
+    <div class="row-fluid">
+
+        <div class="@ display_operate_btns? 'span9': 'span12'">
+            <h1 class="entry-title blogTitle">
+                <a href="/ocxBlog/blog?id={%blog.id%}" title="@ $helper.addslashes(blog.title) " direct><%blog.title%></a>
+            </h1>
+        </div>
+
+        <if "@display_operate_btns">
+        <div class="span3">
+            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxBlog/post" direct>新建</a>
+            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxBlog/post.js?id={% blog.id %}" direct>编辑</a>
+            <a class="btn btn-small btn-danger btnDelete" style="float: right; margin-right: 5px">删除</a>
+        </div>
+        </if>
+
+    </div>
+
+    <div class="post-meta">
+        <span class="meta-date"><% blog.createTime %></span>
+        <span class="meta-author"><% blog.author %></span>
+        <span class="meta-category"><a href="http://www.sysui.com/post/category/designpost" title="查看 前端设计 中的全部文章" rel="category tag">前端设计</a></span>
+        <span class="meta-views"><%blog.views||0%> 次浏览</span>
+    </div>
+
+    <div class="blogContent">
+        <% blog.content %>
+    </div>
+
+    <input name="id" type="hidden" value="@blog && blog.id" />
+
+</div>
+
+<div class="deleteConfirm modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">正在删除文章……</h3>
+    </div>
+    <div class="modal-body">
+        <p>确定要删除文章吗？</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+        <button class="btn btn-danger btnConfirmDelete" data-dismiss="modal">删除</button>
+    </div>
+</div>

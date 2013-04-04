@@ -1,0 +1,11 @@
+
+/*-----------------------------------------------------------------------------------*
+/* = Sidebar
+/*-----------------------------------------------------------------------------------*/
+
+.sidebar-box { margin-bottom: 20px; padding: 20px; background: #FFF; overflow:hidden; box-shadow:rgba(204,204,204,1) 0 0 8px; border-radius:0.4em; }
+.sidebar-box h4 { border-bottom: 1px dashed #CCC; padding-bottom: 5px; margin-top: 0px !important; margin-bottom: 15px; }
+.sidebar-box ul { list-style: none; }
+.sidebar-box li { margin-bottom: 5px; }
+
+.sidebar-box li.cat-item{ float:left; width:100%; height:26px; line-height:26px; border-bottom:dashed 1px #ccc; margin:3px 0; background:url(images/sprite.png) no-repeat -15px -160px; text-indent:22px;}

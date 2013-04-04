@@ -1,0 +1,51 @@
+.entry { margin-bottom: 20px; padding: 20px;  background: #FFF;  box-shadow:rgba(204,204,204,1) 0 0 8px; border-radius:0.4em;}
+.entry img {
+    max-width:690px; margin:12px auto;
+    width: expression(this.width > 690 ? "690px" : true);
+    height:auto;
+    border-radius:8px;
+}
+.entry ul, .entry ol { margin-left: 50px; margin-bottom: 10px; }
+h2.entry-title { margin-top: 0px; margin-bottom: 5px; color:#006600; font-size:16px; }
+h2.entry-title a{ font-size:20px; color:#000;}
+h2.entry-title a:hover{ color:#7da1bc}
+
+h1#archive-title{ font-size:18px; color:#000; font-weight:700;}
+h1#archive-title em{ font-style:normal; padding:0 6px; color:#c90000}
+
+.entry-relate-links { width:100%; clear:both; overflow:hidden; display:block; border-top:1px #d4d4d4 solid; border-bottom:1px #d4d4d4 solid; margin-top:10px; padding:12px 0; list-style:none; }
+.entry-relate-links li{ line-height:22px; padding:3px 0;}
+.entry-relate-links a { display:block; float:left; line-height:22px; color:#666 ;font-size:14px; }
+.entry-relate-links a:hover { color:#000 ; }
+.entry-relate-links span { clear:left; float:left; display:block }
+/*thumbnail*/
+.post-thumbnail {margin:0 0 10px 0; text-align:center; padding:0}
+.post-bottom{ width:100%; position:22px 0; overflow:hidden}
+
+/*post meta*/
+.post-meta { font-size: 12px; color: #999; padding: 7px 0px; margin-bottom: 0px; margin-top: 10px;  border-top: 1px dashed #c2c2c2; }
+.post-meta span { padding-left: 20px; margin-right: 10px; }
+.meta-date { background: url(images/date.png) left no-repeat; }
+.meta-category { background: url(images/category.png) left no-repeat; }
+.meta-views { background: url(images/views.png) left no-repeat; }
+.meta-author { background: url(images/author.png) left no-repeat; }
+.meta-permalink { background: url(images/permalink.png) left no-repeat; }
+.post-meta-single { margin-bottom: 20px; }
+/*post tags*/
+.post-tags { margin-right: 10px; margin-top: 30px; font-size: 12px; }
+.post-tags a { float: left; display: block; color: #717171; margin-left: 5px; margin-bottom: 5px; padding: 3px 7px; line-height: 1.3em; background: #e8e8e8; -webkit-transition: background 0.2s ease-in-out; -moz-transition: background 0.2s ease-in-out; -o-transition: background 0.2s ease-in-out; -ms-transition: background 0.2s ease-in-out; transition: background 0.2s ease-in-out; }
+.post-tags a:hover { background: #333; color: #FFF; text-decoration: none; }
+/*titles*/
+.entry h1 { margin-bottom: 0px }
+.post h2 { line-height: 1.2em; margin: 0 !important; font-size: 21px; }
+.page-title { margin-bottom: 20px !important; padding-bottom: 10px; border-bottom: 1px dashed #CCC; }
+/*sub description*/
+#sub-description { font-size: 14px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #CCC; }
+#sub-description p { margin: 0; padding: 0; }
+/*post navigation*/
+#single-nav { margin-bottom: 20px; }
+#single-nav-left { float: left; width: 50%; }
+#single-nav-right { float: right; width: 50%; text-align: right; }
+#single-nav-left a { float: left; }
+#single-nav-right a { float: right !important; }
+

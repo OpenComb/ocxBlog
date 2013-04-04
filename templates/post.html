@@ -1,0 +1,32 @@
+<link type="text/css" href="/ocxBlog/public/style/index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/ocxBootstrapWysihtml5/public/bootstrap-wysihtml5.css">
+
+
+<div class="entry">
+
+    <div class="row-fluid">
+
+        <div class="span9 row-fluid">
+            <input type="text" name="title" value="@$model.blog && blog.title" class="input-xlarge iptTitle span12" >
+        </div>
+
+        <div class="span3">
+            <button class="btnSave btn btn-success" style="float: right;">保存</button>
+            <a class="btnCancel btn" style="float: right;margin-right: 10px" onclick="history.go(-1)">取消</a>
+        </div>
+    </div>
+
+        <div class="post-meta">
+            <span class="meta-date"><% $model.blog && blog.createTime %></span>
+            <span class="meta-author"><% $model.blog && blog.author %></span>
+            <span class="meta-category"><a href="http://www.sysui.com/post/category/designpost" title="查看 前端设计 中的全部文章" rel="category tag">前端设计</a></span>
+            <span class="meta-views"><%$model.blog && blog.views||0%> 次浏览</span>
+        </div>
+
+    <div class="row-fluid">
+        <textarea class="txtContent span12" style="height:500px"><% $model.blog && $model.blog.content %></textarea>
+    </div>
+
+    <input name="id" type="hidden" value="@$model.blog && $model.blog._id" />
+
+</div>

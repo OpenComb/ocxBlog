@@ -1,0 +1,16 @@
+{
+  "name": "ocBlog",
+  "version": "0.1.0",
+  "description": "a blog extension of opencomb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "alee chou",
+  "license": "MIT"
+
+	, "dependencies": {
+		"ocbRaptor": "0.0.30"
+	}
+}
