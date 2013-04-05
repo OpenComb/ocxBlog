@@ -22,19 +22,26 @@ module.exports = function($)
 	}) ;
 	$(".btnConfirmDelete").click(function(){
 		console.log('delete confirm',arguments) ;
-		$oc.director.requestController('ocxBlog/post:del',{id:$('input[name=id]').val()},function(err,nut){
-			if( err )
-			{
-				console.log(err) ;
-			}
 
-			nut && nut.msgqueue.popup() ;
+		jQuery.request(
 
-			if(nut.model.deleted)
-			{
-				$oc.director.requestController("ocxBlog/index") ;
+			'ocxBlog/post:del?id='+$('input[name=id]').val()
+
+			,function(err,nut){
+				if( err )
+				{
+					console.log(err) ;
+				}
+
+				nut && nut.msgqueue.popup() ;
+
+				if(nut.model.deleted)
+				{
+					jQuery.request("ocxBlog/index") ;
+				}
 			}
-		}) ;
+		) ;
+
 	}) ;
 
 }

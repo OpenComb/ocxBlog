@@ -36,14 +36,14 @@ module.exports = function($)
 			{
 				var group = this.group() ;
 
-				$oc.shipper.require("ocxBootstrapWysihtml5/public/wysihtml5-0.3.0.js",group()) ;
-				$oc.shipper.require("ocxBootstrapWysihtml5/public/bootstrap-wysihtml5.js",group()) ;
+				jQuery.shipper.require("ocxBootstrapWysihtml5/public/wysihtml5-0.3.0.js",group()) ;
+				jQuery.shipper.require("ocxBootstrapWysihtml5/public/bootstrap-wysihtml5.js",group()) ;
 			}
 
 			, function done(err)
 			{
-				$oc.shipper.module("ocxBootstrapWysihtml5/public/wysihtml5-0.3.0.js") ;
-				$oc.shipper.module("ocxBootstrapWysihtml5/public/bootstrap-wysihtml5.js") ;
+				jQuery.shipper.module("ocxBootstrapWysihtml5/public/wysihtml5-0.3.0.js") ;
+				jQuery.shipper.module("ocxBootstrapWysihtml5/public/bootstrap-wysihtml5.js") ;
 
 				// 创建 textarea
 				var editor = $('.txtContent')
@@ -67,29 +67,27 @@ module.exports = function($)
 			throw new Error("找不到博客编辑器") ;
 		}
 
-		var data = {
-			title: $('.iptTitle').val()
-			, content: blogEditor.content()
-			, id: $('input[name=id]').val()
-		}
+		$(".blog.form").request(
 
-		console.log(data) ;
-
-		$oc.director.requestController('ocxBlog/lib/post:save',data,function(err,nut,$rootview){
-
-			nut.msgqueue.popup() ;
-
-			if( nut.model.saved )
+			function(err,nut,$rootview)
 			{
-				$oc.director.requestController('ocxBlog/blog',{id:nut.model.blogid}) ;
+
+				nut.msgqueue.popup() ;
+
+				if( nut.model.saved )
+				{
+					// 切换到文章浏览网页
+					jQuery.request( 'ocxBlog/blog?id='+nut.model.blogid ) ;
+				}
 			}
-		})	;
+			, {
+				data: {
+					content: blogEditor.content()
+				}
+			}
+			// , true
+		)	;
 
 	}
-
-}
-
-module.exports.onSwitchOut = function($)
-{
 
 }
