@@ -1,5 +1,5 @@
-<link type="text/css" href="/ocxBlog/public/style/index.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/ocxBootstrapWysihtml5/public/bootstrap-wysihtml5.css">
+<link type="text/css" href="/ocxblog/public/style/index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/ocxbootstrap-wysihtml5/public/bootstrap-wysihtml5.css">
 
 
 <div class="entry">
@@ -9,14 +9,14 @@
 
         <div class="@ display_operate_btns? 'span9': 'span12'">
             <h1 class="entry-title blogTitle">
-                <a href="/ocxBlog/blog?id={%blog.id%}" title="@ $helper.addslashes(blog.title) " direct><%blog.title%></a>
+                <a href="/ocxblog/blog?id={%blog.id%}" title="@ $helper.addslashes(blog.title) " direct><%blog.title%></a>
             </h1>
         </div>
 
         <if "@display_operate_btns">
         <div class="span3">
-            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxBlog/post" direct>新建</a>
-            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxBlog/post.js?id={% blog.id %}" direct>编辑</a>
+            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post" direct>新建</a>
+            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post.js?id={% blog.id %}" direct>编辑</a>
             <a class="btn btn-small btn-danger btnDelete" style="float: right; margin-right: 5px">删除</a>
         </div>
         </if>

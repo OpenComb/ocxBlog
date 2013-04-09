@@ -1,11 +1,11 @@
-<link type="text/css" href="/ocxBlog/public/style/index.css" rel="stylesheet">
+<link type="text/css" href="/ocxblog/public/style/index.css" rel="stylesheet">
 
 <div class="entry">
     <h4><%title%></h4>
     <ul>
     <foreach for="@blogs" var="blog">
     <li>
-        <a href="/ocxBlog/blog?id={%blog._id%}" title="@blog.title" direct><%blog.title%></a>
+        <a href="/ocxblog/blog?id={%blog._id%}" title="@blog.title" direct><%blog.title%></a>
     </li>
     </foreach>
     </ul>

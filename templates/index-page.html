@@ -1,8 +1,8 @@
-<link type="text/css" href="/ocxBlog/public/style/index.css" rel="stylesheet">
+<link type="text/css" href="/ocxblog/public/style/index.css" rel="stylesheet">
 
 <foreach for="@ blogs" var="blog">
     <div class="entry">
-        <h2 class="entry-title"><a href="/ocxBlog/blog?id={%blog._id%}" title="@blog.title" direct><%blog.title%></a></h2>
+        <h2 class="entry-title"><a href="/ocxblog/blog?id={%blog._id%}" title="@blog.title" direct><%blog.title%></a></h2>
         <div class="post-meta">
             <span class="meta-date"><% blog.createTime %></span>
             <span class="meta-author"><% blog.author %></span>
