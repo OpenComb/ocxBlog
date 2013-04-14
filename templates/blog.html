@@ -7,31 +7,35 @@
 
     <div class="row-fluid">
 
-        <div class="@ display_operate_btns? 'span9': 'span12'">
+        <div class="span9">
             <h1 class="entry-title blogTitle">
-                <a href="/ocxblog/blog?id={%blog.id%}" title="@ $helper.addslashes(blog.title) " direct><%blog.title%></a>
+                <a href="/ocxblog/blog?id={@blog.id}" title="@ $helper.addslashes(blog.title) " direct>{@blog.title}</a>
             </h1>
         </div>
 
-        <if "@display_operate_btns">
-        <div class="span3">
-            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post" direct>新建</a>
-            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post.js?id={% blog.id %}" direct>编辑</a>
-            <a class="btn btn-small btn-danger btnDelete" style="float: right; margin-right: 5px">删除</a>
+        <div class="span3 operations" style="display: {@ display_operate_btns? 'block': 'none' }">
+            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post" direct title="新建文章">
+                <i class="icon-plus icon"></i>
+            </a>
+            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post.js?id={@ blog.id }" direct>
+                <i class="icon-edit icon" title="编辑文章"></i>
+            </a>
+            <a class="btn btn-small btn-danger btnDelete" style="float: right; margin-right: 5px">
+                <i class="icon-trash icon-white" title="删除文章"></i>
+            </a>
         </div>
-        </if>
 
     </div>
 
     <div class="post-meta">
-        <span class="meta-date"><% blog.createTime %></span>
-        <span class="meta-author"><% blog.author %></span>
+        <span class="meta-date">{@ blog.createTime }</span>
+        <span class="meta-author">{@ blog.author }</span>
         <span class="meta-category"><a href="http://www.sysui.com/post/category/designpost" title="查看 前端设计 中的全部文章" rel="category tag">前端设计</a></span>
-        <span class="meta-views"><%blog.views||0%> 次浏览</span>
+        <span class="meta-views">{@blog.views||0} 次浏览</span>
     </div>
 
     <div class="blogContent">
-        <% blog.content %>
+        {@ blog.content }
     </div>
 
     <input name="id" type="hidden" value="@blog && blog.id" />
