@@ -1,6 +1,6 @@
 var tplCahces = require("octemplate") ;
 
-module.exports = function(platform)
+module.exports = function(platform,callback)
 {
 	// 索引
 	platform.on('openDB',function(err,client){
@@ -30,4 +30,6 @@ module.exports = function(platform)
 			throw err ;
 		}
 	}) ;
+
+	callback(null) ;
 }
