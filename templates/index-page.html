@@ -2,11 +2,11 @@
 
 <foreach for="@ blogs" var="blog">
     <div class="entry">
-        <h2 class="entry-title"><a href="/ocxblog/blog?id={@blog._id}" title="@blog.title" direct>{@blog.title}</a></h2>
+        <h2 class="entry-title"><a href="/ocxblog/blog?id={@blog._id}" title="@blog.title" class="stay">{@blog.title}</a></h2>
         <div class="post-meta">
             <span class="meta-date">{@ blog.createTime }</span>
             <span class="meta-author">{@ blog.author }</span>
-            <span class="meta-category"><a href="/ocxblog/index" title="查看 前端设计 中的全部文章" rel="category tag" direct>前端设计</a></span>
+            <span class="meta-category"><a href="/ocxblog/index" title="查看 前端设计 中的全部文章" rel="category tag" class="stay">前端设计</a></span>
             <span class="meta-views">{@blog.views||0} 次浏览</span>
         </div>
         <!-- END post-meta -->

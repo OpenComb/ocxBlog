@@ -23,7 +23,7 @@ module.exports = function(platform,callback)
 	tplCahces.template('ocplatform/templates/WebLayout.html',function(err,tpl){
 		if(!err)
 		{
-			tpl.$('ul.nav-top').append('<li class="menu-item"><a href="/ocxblog/index" direct>Blog</a></li>') ;
+			tpl.$('ul.nav-top').append('<li class="menu-item"><a href="/ocxblog/index" class="stay">Blog</a></li>') ;
 		}
 		else
 		{

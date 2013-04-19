@@ -1,18 +1,18 @@
 <div class="pagination" style="margin-bottom: 5px; margin-top: 0px;">
 
     <ul style="float:left">
-        <li class="@ thisPageNum==1 && 'disabled'"><a href="/ocxblog/index?page={@prevPageNum}" direct="view">&laquo;</a></li>
+        <li class="@ thisPageNum==1 && 'disabled'"><a href="/ocxblog/index?page={@prevPageNum}" class="stay-view">&laquo;</a></li>
 
         <loop end="@pageCount" var="pageNum">
-            <li class="@ thisPageNum==pageNum && 'active'"><a href="/ocxblog/index?page={@pageNum}" direct="view">{@pageNum}</a></li>
+            <li class="@ thisPageNum==pageNum && 'active'"><a href="/ocxblog/index?page={@pageNum}" class="stay-view">{@pageNum}</a></li>
         </loop>
 
-        <li class="@ $helper.ge(thisPageNum,pageCount) && 'disabled'"><a href="/ocxblog/index?page={@nextPageNum}" direct="view">&raquo;</a></li>
+        <li class="@ $helper.ge(thisPageNum,pageCount) && 'disabled'"><a href="/ocxblog/index?page={@nextPageNum}" class="stay-view">&raquo;</a></li>
     </ul>
 
     <div class="operation" style="display:{@ display_operate_btns? 'block': 'none' };float:right">
 
-        <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post" direct title="新建文章">
+        <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post" class="stay" title="新建文章">
             <i class="icon-plus icon"></i>
             新建文章
         </a>

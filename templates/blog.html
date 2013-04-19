@@ -9,15 +9,15 @@
 
         <div class="span9">
             <h1 class="entry-title blogTitle">
-                <a href="/ocxblog/blog?id={@blog.id}" title="@ $helper.addslashes(blog.title) " direct>{@blog.title}</a>
+                <a href="/ocxblog/blog?id={@blog.id}" title="@ $helper.addslashes(blog.title) " class="stay">{@blog.title}</a>
             </h1>
         </div>
 
         <div class="span3 operations" style="display: {@ display_operate_btns? 'block': 'none' }">
-            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post" direct title="新建文章">
+            <a class="btn btn-small stay" style="float: right; margin-right: 5px" href="/ocxblog/post" title="新建文章">
                 <i class="icon-plus icon"></i>
             </a>
-            <a class="btn btn-small" style="float: right; margin-right: 5px" href="/ocxblog/post.js?id={@ blog.id }" direct>
+            <a class="btn btn-small stay" style="float: right; margin-right: 5px" href="/ocxblog/post.js?id={@ blog.id }">
                 <i class="icon-edit icon" title="编辑文章"></i>
             </a>
             <a class="btn btn-small btn-danger btnDelete" style="float: right; margin-right: 5px">
